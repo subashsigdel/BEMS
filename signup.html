@@ -25,15 +25,23 @@
                         <input type="hidden" name="csrfmiddlewaretoken" value="aUYWM7G3LRhkBK7nCwB3zSexJqsQ63ORKKmGNe32bmGL2W0L4tx3N9GzKMjQnmcC">
                         <div class="form-group">
                             <input type="hidden" name="role" value="4" id="id_role">
-                            <h5><i class="zmdi zmdi-account material-icons-name"></i>Your name:</h5>
+                            <h5><svg class="icon">
+                                <use xlink:href="./icomoon/sprite.svg#icon-user-plus"></use>
+                        </svg>Your name</h5>
                         </div>
-                        <input type="text" name="name" maxlength="30" class="form-control" id="id_name">
+                        <input type="text" name="name" maxlength="30" placeholder="Name" class="form-control" id="id_name">
                         <div class="form-group">
-                            <h5><i class="zmdi zmdi-email"></i> Email:<h5>
+                            <h5>
+                                <svg class="icon">
+                                    <use xlink:href="./icomoon/sprite.svg#icon-envelop"></use>
+                                </svg>Email
+                            <h5>
                         </div>
-                        <input type="email" name="email" class="form-control" required id="id_email">
+                        <input type="email" name="email" class="form-control" placeholder="Email" required id="id_email">
                         <div class="form-group">
-                            <h5><i class="zmdi zmdi-lock"></i>New password</h5>
+                            <h5><svg class="icon">
+                                <use xlink:href="./icomoon/sprite.svg#icon-lock"></use>
+                        </svg>New password</h5>
 
                         </div>
                         <input type="password" name="password" placeholder="Password" class="form-control" required id="id_password">
@@ -57,7 +65,5 @@
 </div>
 
 <!-- JS -->
-<script src="./jquery.min.js"></script>
-<script src="./main.js"></script>
 </body>
 </html>
