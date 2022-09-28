@@ -1,0 +1,19 @@
+{
+  "name": "bems",
+  "version": "1.0.0",
+  "description": "BioMedical Equipment Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subash-5/BEMS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subash-5/BEMS/issues"
+  },
+  "homepage": "https://github.com/subash-5/BEMS#readme"
+}
