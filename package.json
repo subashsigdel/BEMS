@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/subash-5/BEMS/issues"
   },
-  "homepage": "https://github.com/subash-5/BEMS#readme"
+  "homepage": "https://github.com/subash-5/BEMS#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
 }
