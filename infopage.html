@@ -1,0 +1,806 @@
+
+
+<html lang="en" >
+    <head>
+      <meta charset="UTF-8">
+      <title>BEMS</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="./multistepform.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    
+    
+    </head>
+    <body>
+    <!-- partial:index.partial.html -->
+    <div class="info">
+            <!-- <style>
+                #content {
+                  position:relative;
+                }
+            
+                .ribbon {
+                  position:absolute;
+                  top:2%;
+                  left:3%;
+                  height: 60px;
+                }
+            </style> -->
+      <!--<img src="/static/images/logo.jpg" class="ribbon">--> 
+          <div class="title">
+            <div class="title__welcome">Welcome To</div>
+            <div class="title__name">Bio-Medical Equipment Management System</div>
+          </div>
+      <!-- <span>
+        Made with
+        <i class="fa fa-beer"></i>
+        by
+        <a href="http://www.idesignradthings.com">Ty Stelmach</a>
+        <div class="spoilers">
+          An app created to score your nonprofit's fundraising technique.</a> 
+        </div>
+      </span> -->
+    </div>
+    
+    
+    
+    <!-- Modal -info -->
+    <div class="container">
+    <div id="modal-3" class="modal" data-modal-effect="slide-top">
+      <div class="modal-content">
+        <h2 class="fs-title">Score Index</h2>
+        <h3 class="fs-subtitle">Getting the most out of your data</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <input type="button" name="next" class="next action-button modal-close" value="Got it!">
+      </div>
+    </div>
+    </div>
+    
+    <form class="steps" accept-charset="UTF-8" method="POST" novalidate="" action = "/trainer/new/trainer">
+      <input type="hidden" name="csrfmiddlewaretoken" value="e63SjDMeVEfwQaUNbaEKRZ3Ncgbur84ycp1rfKY1ls1kRrV5oQwTzZerDtVXrCaH">
+        <ul id="progressbar">
+          <li class="active">Trainer Information</li>
+          <li>Address</li>
+          <li>Others</li>
+        </ul>
+    
+    
+    
+      <!-- USER INFORMATION FIELD SET --> 
+      <fieldset>
+        <h2 class="fs-title">Basic Information</h2>
+        <h3 class="fs-subtitle">We just need some basic information to begin your scoring</h3>
+        <!-- Begin What's Your First Name Field -->
+            <div class="hs_firstname field hs-form-field">
+              <label>What's your Name? *</label>
+    
+                <input type="text" name="name" maxlength="255" class="form-control" id="id_name">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+        <!-- End What's Your First Name Field -->
+    
+        <!-- Begin What's Your Email Field -->
+            <div class="hs_email field hs-form-field">
+            
+              <label>What's your E-mail Address? *</label>
+    
+                <input type="text" name="email" maxlength="255" class="form-control" id="id_email">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+        <!-- End What's Your Email Field -->
+    
+        <!-- Begin Total Number of Constituents in Your Database Field -->
+            <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database">
+            
+              <label>What's your contact number ? *</label>
+    
+                <input type="text" name="phone" maxlength="255" class="form-control" id="id_phone">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+          <div class="hs_email field hs-form-field hs_total_number_of_constituents_in_your_database">
+    
+              <div>Upload your profile picture ? *</div>
+    
+                <input type="file" name="profile" accept="image/*" class="form-control custom " id="id_profile">
+                <!-- <label for="profile" class="profile-label">Upload Photo</label> -->
+              <!-- <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span> -->
+            </div>
+        <!-- End Total Number of Constituents in Your Database Field -->
+        <input type="button" data-page="1" name="next" class="next action-button" value="Next" />
+        <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">© 2021 Mission Oxygen Team</div>
+      </fieldset>
+    
+    
+    
+      <!-- ACQUISITION FIELD SET -->  
+      <fieldset>
+        <h2 class="fs-title">Address</h2>
+        <h3 class="fs-subtitle">Current Address</h3>
+          <!-- Begin Total Number of Donors in Year 1 Field -->
+            <div class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            
+              <label>Province</label>
+                <select name="province" class="form-control" id="id_province">
+      <option value="" selected>---------</option>
+    
+      <option value="10">Bagmati Province</option>
+    
+      <option value="11">Gandaki Province</option>
+    
+      <option value="13">Karnali Province</option>
+    
+      <option value="12">Lumbini Province</option>
+    
+      <option value="9">Madhesh Province</option>
+    
+      <option value="8">Province 1</option>
+    
+      <option value="14">Sudurpashchim Province</option>
+    
+    </select>
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+          <!-- End Total Number of Donors in Year 1 Field -->
+    
+          <!-- Begin Total Number of Donors in Year 2 Field -->
+            <div class="form-item webform-component webform-component-textfield hs_total_number_of_donors_in_year_2 field hs-form-field" id="webform-component-acquisition--amount-2">
+            
+              <label>District</label>
+    
+                <select name="district" class="form-control" id="id_district">
+      <option value="" selected>---------</option>
+    
+      <option value="1">Dailekh</option>
+    
+      <option value="2">Kaski</option>
+    
+      <option value="3">Rupandehi.</option>
+    
+      <option value="5">Nawalparasi</option>
+    
+      <option value="6">Kapilvastu</option>
+    
+      <option value="7">Arghakhanchi</option>
+    
+      <option value="8">Banke</option>
+    
+      <option value="9">Bardiya</option>
+    
+      <option value="10">Rukum Eastern</option>
+    
+      <option value="11">Gulmi</option>
+    
+      <option value="12">Palpa</option>
+    
+      <option value="13">Pyuthan</option>
+    
+      <option value="14">Rolpa</option>
+    
+      <option value="15">Dang</option>
+    
+      <option value="16">Bhaktapur</option>
+    
+      <option value="17">Lalitpur</option>
+    
+      <option value="18">Kathmandu</option>
+    
+      <option value="19">Myagdi</option>
+    
+      <option value="20">Tanahun</option>
+    
+      <option value="21">Baglung</option>
+    
+      <option value="22">Gorkha</option>
+    
+      <option value="23">Lamjung</option>
+    
+      <option value="24">Manang</option>
+    
+      <option value="25">Parbat</option>
+    
+      <option value="26">Saptari</option>
+    
+      <option value="27">Dolpa</option>
+    
+      <option value="28">Humla</option>
+    
+      <option value="29">Jajarkot</option>
+    
+      <option value="30">Jumla</option>
+    
+      <option value="31">Kalikot</option>
+    
+      <option value="32">Mugu</option>
+    
+      <option value="33">Rukum Western</option>
+    
+      <option value="34">Salyan</option>
+    
+      <option value="35">Surkhet</option>
+    
+      <option value="37">Siraha</option>
+    
+      <option value="40">Kanchanpur</option>
+    
+      <option value="41">Kailali</option>
+    
+      <option value="42">Parsa</option>
+    
+      <option value="43">Dhanusha</option>
+    
+      <option value="44">Mahottari</option>
+    
+      <option value="45">Sarlahi</option>
+    
+      <option value="46">Rautahat</option>
+    
+      <option value="47">Bara</option>
+    
+      <option value="48">Nawalpur</option>
+    
+      <option value="49">Mustang</option>
+    
+      <option value="50">Syanja</option>
+    
+      <option value="51">Bhojpur</option>
+    
+      <option value="52">Dhankuta</option>
+    
+      <option value="53">Illam</option>
+    
+      <option value="54">Jhapa</option>
+    
+      <option value="55">Khotang</option>
+    
+      <option value="56">Morang</option>
+    
+      <option value="57">Okhaldhunga</option>
+    
+      <option value="58">Panchthar</option>
+    
+      <option value="59">Sankhuwasabha</option>
+    
+      <option value="60">Solukhumbu</option>
+    
+      <option value="61">Sunsari</option>
+    
+      <option value="62">Taplejung</option>
+    
+      <option value="63">Tehrathum</option>
+    
+      <option value="64">Udayapur</option>
+    
+      <option value="66">Sindhuli</option>
+    
+      <option value="67">Ramechhap</option>
+    
+      <option value="68">Dolakha</option>
+    
+      <option value="69">Dhading</option>
+    
+      <option value="70">Kavrepalanchok</option>
+    
+      <option value="71">Nuwakot</option>
+    
+      <option value="72">Rasuwa</option>
+    
+      <option value="73">Sindhupalchok</option>
+    
+      <option value="74">Chitwan</option>
+    
+      <option value="75">Makwanpur</option>
+    
+      <option value="76">Achham</option>
+    
+      <option value="77">Doti</option>
+    
+      <option value="78">Bajhang</option>
+    
+      <option value="79">Bajura</option>
+    
+      <option value="80">Dadeldhura</option>
+    
+      <option value="81">Baitadi</option>
+    
+      <option value="82">Darchula</option>
+    
+    </select>
+                <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <!-- End Total Number of Donors in Year 2 Field -->
+    
+          <!-- Begin Calc of Total Number of Donors Fields -->
+          <!-- THIS FIELD IS NOT EDITABLE | GRAYED OUT -->
+            <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_donor_percent_change field hs-form-field">
+            
+              <label>Municipality</label>
+    
+                <select name="municipality" class="form-control" id="id_municipality">
+      <option value="" selected>---------</option>
+    
+      <option value="1">Kathmandu</option>
+    
+      <option value="3">Biratnagar</option>
+    
+      <option value="4">Pokhara</option>
+    
+      <option value="5">Lalitpur</option>
+    
+      <option value="6">Bharatpur</option>
+    
+      <option value="7">Birganj</option>
+    
+      <option value="8">Butwal</option>
+    
+      <option value="9">Dharan</option>
+    
+      <option value="10">Bhim Datta</option>
+    
+      <option value="11">Dhangadhi</option>
+    
+      <option value="12">Janakpur</option>
+    
+      <option value="13">Hetauda</option>
+    
+      <option value="14">Madhyapur Thimi</option>
+    
+      <option value="15">Bhaktapur</option>
+    
+      <option value="16">Damak</option>
+    
+      <option value="17">Itahari</option>
+    
+      <option value="18">Nepalganj</option>
+    
+      <option value="19">Triyuga</option>
+    
+      <option value="20">Kirtipur</option>
+    
+      <option value="21">Siddharthanagar</option>
+    
+      <option value="22">Ghorahi</option>
+    
+      <option value="23">Kohalpur</option>
+    
+      <option value="24">Birtamod</option>
+    
+      <option value="25">Lekhnath</option>
+    
+      <option value="26">Mechinagar</option>
+    
+      <option value="27">Chandrapur</option>
+    
+      <option value="28">Tikapur</option>
+    
+      <option value="29">Gulariya</option>
+    
+      <option value="30">Gadhimai</option>
+    
+      <option value="31">Tulsipur</option>
+    
+      <option value="32">Birendranagar</option>
+    
+      <option value="33">Mirchaiya</option>
+    
+      <option value="34">Ratnanagar</option>
+    
+      <option value="35">Dhanushadham</option>
+    
+      <option value="36">Shambhunath</option>
+    
+      <option value="37">Byas</option>
+    
+      <option value="38">Kalaiya</option>
+    
+      <option value="39">Kanchan Rup</option>
+    
+      <option value="40">Hariwan</option>
+    
+      <option value="41">Sunwal</option>
+    
+      <option value="42">Nilkantha</option>
+    
+      <option value="43">Kamalamai</option>
+    
+      <option value="44">Rajbiraj</option>
+    
+      <option value="45">Urlabari</option>
+    
+      <option value="46">Gaur</option>
+    
+      <option value="47">Chireshwarnath</option>
+    
+      <option value="48">Lahan</option>
+    
+      <option value="49">Gaidakot</option>
+    
+      <option value="50">Gorkha</option>
+    
+      <option value="51">Gaushala</option>
+    
+      <option value="52">Putalibazar</option>
+    
+      <option value="53">Karyabinayak</option>
+    
+      <option value="54">Kapilvastu</option>
+    
+      <option value="55">Rajapur</option>
+    
+      <option value="56">Baglung</option>
+    
+      <option value="57">Tansen</option>
+    
+      <option value="58">Bandipur</option>
+    
+      <option value="59">Inaruwa</option>
+    
+      <option value="60">Siraha</option>
+    
+      <option value="61">Katari</option>
+    
+      <option value="62">Panauti</option>
+    
+      <option value="63">Bidur</option>
+    
+      <option value="64">Dhankuta</option>
+    
+      <option value="65">Shuklagandaki</option>
+    
+      <option value="66">Khandbari</option>
+    
+      <option value="67">Ramgram</option>
+    
+      <option value="68">Malangwa</option>
+    
+      <option value="69">Phidim</option>
+    
+      <option value="70">Banepa</option>
+    
+      <option value="71">Besisahar</option>
+    
+      <option value="72">Waling</option>
+    
+      <option value="73">Jaleswar</option>
+    
+      <option value="74">Dipayal-Silgadhi</option>
+    
+      <option value="75">Kusma</option>
+    
+      <option value="76">Panchkhal</option>
+    
+      <option value="77">Bhimeshwar</option>
+    
+      <option value="78">Sandhikharka</option>
+    
+      <option value="79">Beni</option>
+    
+      <option value="80">Amaragadhi</option>
+    
+      <option value="81">Narayan</option>
+    
+      <option value="82">Champapur</option>
+    
+      <option value="83">Taplejung</option>
+    
+      <option value="84">Ilam</option>
+    
+      <option value="85">Bhadrapur</option>
+    
+      <option value="86">Dasharathchand</option>
+    
+      <option value="87">Mangalsen</option>
+    
+      <option value="88">Salyan</option>
+    
+      <option value="89">Bhojpur</option>
+    
+      <option value="90">Myanglung</option>
+    
+      <option value="91">Chautara</option>
+    
+      <option value="92">Sankharpur</option>
+    
+      <option value="93">Manthali</option>
+    
+      <option value="94">Resunga</option>
+    
+      <option value="95">Dhulikhel</option>
+    
+      <option value="96">Pyuthan</option>
+    
+      <option value="97">Sanphebagar</option>
+    
+      <option value="98">Jayaprithvi</option>
+    
+      <option value="99">Chandannath</option>
+    
+      <option value="100">Diktel</option>
+    
+      <option value="101">Suryodaya</option>
+    
+      <option value="102">Shani-Arjun</option>
+    
+      <option value="103">Kankai</option>
+    
+      <option value="104">Belbari</option>
+    
+      <option value="105">Pathari Sanischare</option>
+    
+      <option value="106">Sundar Dulari</option>
+    
+      <option value="107">Koshi Haraicha</option>
+    
+      <option value="108">Rangeli</option>
+    
+      <option value="109">Duhabi-Bhaluwa</option>
+    
+      <option value="110">Siddhicharan</option>
+    
+      <option value="111">Beltar-Basaha</option>
+    
+      <option value="112">Nijgadh</option>
+    
+      <option value="113">Lalbandi</option>
+    
+      <option value="114">Ishwarpur</option>
+    
+      <option value="115">Thaha</option>
+    
+      <option value="116">Khairahani</option>
+    
+      <option value="117">Chitrawan</option>
+    
+      <option value="118">Kawasoti</option>
+    
+      <option value="119">Devchuli</option>
+    
+      <option value="120">Bardaghat</option>
+    
+      <option value="121">Sainamina</option>
+    
+      <option value="122">Lumbini Sanskritik</option>
+    
+      <option value="123">Devdaha</option>
+    
+      <option value="124">Tilottama</option>
+    
+      <option value="125">Krishnanagar</option>
+    
+      <option value="126">Shivaraj</option>
+    
+      <option value="127">Sharada</option>
+    
+      <option value="128">Dullu</option>
+    
+      <option value="129">Lamki Chuha</option>
+    
+      <option value="130">Attariya</option>
+    
+      <option value="131">Api</option>
+    
+      <option value="132">Punarwas</option>
+    
+      <option value="133">Belauri</option>
+    
+      <option value="134">Chapakot</option>
+    
+      <option value="135">Rampur</option>
+    
+      <option value="136">Chainpur</option>
+    
+    </select>
+            </div>
+          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_donor_percent_change field hs-form-field">
+    
+              <label>Ward</label>
+    
+                <select name="ward" class="form-control" id="id_ward">
+      <option value="" selected>---------</option>
+    
+      <option value="1">1</option>
+    
+      <option value="2">2</option>
+    
+      <option value="3">3</option>
+    
+      <option value="4">4</option>
+    
+      <option value="5">5</option>
+    
+      <option value="6">6</option>
+    
+      <option value="7">7</option>
+    
+      <option value="8">8</option>
+    
+      <option value="9">9</option>
+    
+      <option value="10">10</option>
+    
+      <option value="11">11</option>
+    
+      <option value="12">12</option>
+    
+      <option value="13">13</option>
+    
+      <option value="14">14</option>
+    
+      <option value="15">15</option>
+    
+      <option value="16">16</option>
+    
+      <option value="17">17</option>
+    
+      <option value="18">18</option>
+    
+      <option value="19">19</option>
+    
+      <option value="20">20</option>
+    
+      <option value="21">21</option>
+    
+      <option value="22">22</option>
+    
+      <option value="23">23</option>
+    
+      <option value="24">24</option>
+    
+      <option value="25">25</option>
+    
+      <option value="26">26</option>
+    
+      <option value="27">27</option>
+    
+      <option value="28">28</option>
+    
+      <option value="29">29</option>
+    
+      <option value="30">30</option>
+    
+      <option value="31">31</option>
+    
+      <option value="32">32</option>
+    
+    </select>
+            </div>
+          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_donor_percent_change field hs-form-field">
+    
+              <label>Street</label>
+    
+                <input type="text" name="address" maxlength="255" class="form-control" id="id_address">
+            </div>
+            <!-- End Calc of Total Number of Donors Fields -->
+        <input type="button" data-page="2" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" data-page="2" name="next" class="next action-button" value="Next" />
+        <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">© 2021 Mission Oxygen Team</div>
+      </fieldset>
+    
+    
+    
+      <!-- Cultivation FIELD SET -->  
+      <fieldset>
+        <h2 class="fs-title">Your Details</h2>
+          <!-- Begin Average Gift Size in Year 1 Field -->
+            <div class="form-item webform-component webform-component-textfield" id="webform-component-cultivation--amount-3 hs_total_giving_in_year_1 field hs-form-field">
+    
+              <label>What's your highest level of education ? *</label>
+    
+                <input type="text" name="education" maxlength="255" class="form-control" id="id_education">
+                <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <!-- End Total Giving In Year 1 Field -->
+    
+          <!-- Begin Total Giving In Year 2 Field -->
+            <div class="form-item webform-component webform-component-textfield hs_total_giving_in_year_2 field hs-form-field" id="webform-component-cultivation--amount-4">
+    
+              <label>Have any associated organization or clinic ? (Organization name)</label>
+    
+                <input type="text" name="associated_organization_or_clinic" maxlength="255" class="form-control" id="id_associated_organization_or_clinic">        <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+    
+            <!-- End Total Giving In Year 2 Field -->
+    
+          <!-- Begin Average Gift Size Percent Change Field 2 -->
+          <!-- THIS FIELD IS NOT EDITABLE | GRAYED OUT -->
+            <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_giving_percent_change field hs-form-field">
+    
+              <label>Your area of expertise ?</label>
+    
+                <input type="text" name="area_of_expertise" maxlength="255" class="form-control" id="id_area_of_expertise">
+            </div>
+          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_giving_percent_change field hs-form-field">
+    
+              <label>How many years of experience you have ? ?</label>
+    
+                <input type="text" name="experience" maxlength="255" class="form-control" id="id_experience">
+            </div>
+          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_giving_percent_change field hs-form-field">
+    
+              <label>Your age group ?</label>
+    
+                <select name="ege_group" class="form-control" id="id_ege_group">
+      <option value="" selected>---------</option>
+    
+      <option value="Below 19">Below 19</option>
+    
+      <option value="20-29">20-29</option>
+    
+      <option value="30-39">30-39</option>
+    
+      <option value="40-49">40-49</option>
+    
+      <option value="50-59">50-59</option>
+    
+      <option value="Above 60">Above 60</option>
+    
+    </select>
+            </div>
+          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_giving_percent_change field hs-form-field">
+    
+              <label>Ethnic ?</label>
+    
+                <input type="text" name="ethnic" maxlength="255" class="form-control" id="id_ethnic">
+            </div>
+          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_giving_percent_change field hs-form-field">
+    
+              <label>You get certification from the Mission Oxygen Team ?</label>
+    
+                <select name="certification_from_mot" class="form-control" id="id_certification_from_mot">
+      <option value="" selected>---------</option>
+    
+      <option value="yes">Yes</option>
+    
+      <option value="No">No</option>
+    
+    </select>
+            </div>
+          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_giving_percent_change field hs-form-field">
+    
+              <label>Any Supporting documents ? (CV)</label>
+    
+                <input type="file" name="document" class="form-control" id="id_document">
+            </div>
+          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_giving_percent_change field hs-form-field">
+    
+              <label>Your current location latitude ?</label>
+    
+                <input type="number" name="latitude" step="any" class="form-control" id="id_latitude">
+            </div>
+          <div class="form-item webform-component webform-component-textfield webform-container-inline hs_total_giving_percent_change field hs-form-field" id="webform-component-cultivation--percent-change2">
+    
+              <label>Your current location longitude ?</label>
+    
+                <input type="number" name="logitude" step="any" class="form-control" id="id_logitude">
+            </div>
+            <!-- End Average Gift Size in Year 1 Field -->
+    <input type="hidden" name="created_by" value="18" id="id_created_by">
+            <!-- End Final Calc -->
+        <input type="button" data-page="3" name="previous" class="previous action-button" value="Previous" />
+        <input class="hs-button primary large action-button next" type="submit" value="Submit">
+        <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">© 2021 Mission Oxygen Team</div>
+      </fieldset>
+    </form>
+    <!-- partial -->
+      <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+    <script src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js'></script>
+    <script  src="./multistepform.js"></script>
+    
+    </body>
+    </html>

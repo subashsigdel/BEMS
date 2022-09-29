@@ -1,5 +1,18 @@
+*,
+*::after,
+*::before{
+  font-family: 'Roboto', sans-serif;
+}
+
+
 /* @extend display-flex; */
-display-flex, .display-flex, .display-flex-center, .signup-content, .signin-content, .social-login, .socials {
+display-flex, 
+.display-flex, 
+.display-flex-center, 
+.signup-content, 
+.signin-content, 
+.social-login, 
+.socials {
   display: flex;
   display: -webkit-flex; }
 
