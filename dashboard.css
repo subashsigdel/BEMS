@@ -13,6 +13,17 @@ body{
     background: rgb(234, 229, 229);
     position: relative;
   }
+
+.container {
+  display: flex;
+
+}
+
+.right{
+  flex-grow: 2;
+  
+}
+
   #menu{
     width: 300px;
     background: rgb(89, 87, 87);
@@ -105,9 +116,9 @@ body{
 
 
 
- #interface{
+ /* #interface{
     width: calc(100% - 300px);
-}
+} */
 #interface .navigation  {
     display: flex;
     align-items: center;
@@ -140,7 +151,11 @@ body{
 #interface  .profile{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
+}
+
+.profile{
+  width: 100%;
 }
 
 #interface  .profile i{
