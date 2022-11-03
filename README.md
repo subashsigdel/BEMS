@@ -7,3 +7,7 @@ trainer portfolio footer customization
 
 Error
 -social media link uploader from trainer 
+
+
+
+...
