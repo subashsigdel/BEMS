@@ -1,0 +1,31 @@
+
+.partners{
+    padding-top: 2rem;
+
+}
+.heading{
+    text-align: center;
+    color: blue;
+    font-size: 3rem;
+
+}
+.form{
+    text-align: center;
+    flex-direction:row;
+    background-color: rgb(173, 173, 173);
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.productN{
+    padding: 1rem;
+    text-align: center;
+
+}
+.nameofproduct{
+    padding: 1rem;
+    font-weight: bold;
+    color: blue;
+}
+.gap{
+    padding: 1rem;
+}
